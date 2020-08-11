@@ -1,0 +1,30 @@
+name:                cereal-benchmark
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/saurabhnanda/cereal-benchmark#readme
+license:             BSD3
+author:              Saurabh Nanda
+maintainer:          saurabhnanda@gmail.com
+copyright:           Saurabh Nanda
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - cereal
+  - criterion
+  - bytestring
+
+executables:
+  cereal-benchmark:
+    source-dirs:      src
+    main:             Main.hs
+    ghc-options:
+      - -O2
+      - -threaded
+      - -fprof-auto
+      - -fprof-cafs
+      - -rtsopts
+      - -with-rtsopts=-N

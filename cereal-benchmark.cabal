@@ -1,0 +1,34 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b827bc97d0a3d70a89418817f261d5963b91e21eb512ecdabf57ff3c851c5b0d
+
+name:           cereal-benchmark
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/saurabhnanda/cereal-benchmark#readme
+author:         Saurabh Nanda
+maintainer:     saurabhnanda@gmail.com
+copyright:      Saurabh Nanda
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+executable cereal-benchmark
+  main-is: Main.hs
+  other-modules:
+      Paths_cereal_benchmark
+  hs-source-dirs:
+      src
+  ghc-options: -O2 -threaded -fprof-auto -fprof-cafs -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cereal
+    , criterion
+  default-language: Haskell2010
